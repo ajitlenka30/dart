@@ -17,7 +17,7 @@ void reg(){
 
     if(name == nam && password == pass)
     {
-      print("\n\nlogin success");
+      print("\n\n\t\tlogin success");
       stdout.write("\n***************************************************************************");
     }
     else 
@@ -40,30 +40,40 @@ void main(List<String> args) {
   switch (choice) {
     case 1:
       int cash = 150;
-      print("your current balance:- $cash"); 
+      stdout.write("\n***************************************************************************");
+      stdout.write("\nyour current balance:- $cash"); 
+      stdout.write("\n***************************************************************************");
       break;
     case 2:
       int cash = 150;
-      print("Enter amount you want to deposit :- ");
+      stdout.write("\n***************************************************************************");
+      stdout.write("\nEnter amount you want to deposit :- ");
       int cre = int.parse(stdin.readLineSync()as String);
       var credit = cre + cash;
-      print("Cash credit success......");
-      print("Current cash in your account:- $credit"); 
+      stdout.write("\n***************************************************************************");
+      stdout.write("\nCash credit success......");
+      stdout.write("\n***************************************************************************");
+      stdout.write("\nCurrent cash in your account:- $credit"); 
+      stdout.write("\n***************************************************************************");
     break;
     case 3:
-      // int cash = 150;
-      print("Enter Principle Amount:- ");
+      stdout.write("\nEnter Principle Amount:- ");
       double amount = double.parse(stdin.readLineSync()as String);
-      print("Enter Rate of Interest:- ");
+      stdout.write("\nEnter Rate of Interest:- ");
       double rate = double.parse(stdin.readLineSync()as String);
-      print("Enter Time Period:- ");
+      stdout.write("\nEnter Time Period:- ");
       double time = double.parse(stdin.readLineSync()as String);
-     // var deb = cash - debit;
+
       double deb = amount * rate * time /100;
-     // print("Cash Debit success........");
-      print("total:- $deb");
+      double total = deb + amount;
+
+      stdout.write("\n\n***************************************************************************");
+      stdout.write("\ntotal:- $total");
+      stdout.write("\n\n***************************************************************************");
       break;
     default:
-      print("Please enter a valid choice...");
+      stdout.write("\n\n***************************************************************************");
+      stdout.write("\nPlease enter a valid choice...");
+      stdout.write("\n\n***************************************************************************");
     }
 }
