@@ -1,7 +1,6 @@
-void main(){
+void main() {
+  /// integer data type {only for number}
+  int a = 12;
 
-/// integer data type {only for number}
-int a = 12;
-
-print("number is : $a"); 
+  print("number is : $a");
 }

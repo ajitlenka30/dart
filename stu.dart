@@ -1,9 +1,10 @@
 // import 'dart:ht
 import 'dart:io';
+
 void main(List<String> args) {
   print("Enter your name:- ");
   String? name = stdin.readLineSync();
-   
+
   print("Enter student roll no:- ");
   int roll = int.parse(stdin.readLineSync() as String);
   print("Enter marks of odia:- ");
@@ -17,8 +18,8 @@ void main(List<String> args) {
   print("Enter marks of science:- ");
   int e = int.parse(stdin.readLineSync() as String);
 
-  var total = a+b+c+d+e;
-    
+  var total = a + b + c + d + e;
+
   print("Entered name of student := $name");
   print("Entered roll NO of student := $roll");
   print("Entered marks  of odia:= $a");
@@ -27,62 +28,39 @@ void main(List<String> args) {
   print("Entered marks  of science:= $d");
   print("Entered total marks:= $total");
 
-  if(30>a)
-  {
+  if (30 > a) {
     print("fail in odia");
-  }
-  else if(30>b)
-  {
-    print("fail in english"); 
-  }
-  else if(30>c)
-  {
+  } else if (30 > b) {
+    print("fail in english");
+  } else if (30 > c) {
     print("fail in hindi");
-  }
-  else if(30>d)
-  {
+  } else if (30 > d) {
     print("fail in math");
-  }
-  else if(30>e)
-  {
+  } else if (30 > e) {
     print("fail in science");
-  } 
-  else
-  {
+  } else {
     print("sab mai pass ho app....");
   }
 
-  if(400>total)
-  {
-     print("fail hoo app abb chai ki dukan khol..");
-  } 
-  else
-  {
+  if (400 > total) {
+    print("fail hoo app abb chai ki dukan khol..");
+  } else {
     print("pass ho geya bidu abb mithai batt....");
-  } 
+  }
 
-  if(total>400)
-  {
+  if (total > 400) {
     print("grade a");
-  }
-  else if(total>350)
-  {
-   print("grade b"); 
-  }
-  else if(total>300)
-  {
+  } else if (total > 350) {
+    print("grade b");
+  } else if (total > 300) {
     print("grade c");
-  }
-  else if(total>250)
-  {
+  } else if (total > 250) {
     print("grade d");
-  }
-  else
-  {
+  } else {
     print("grade F");
   }
 
-  var per = total/5;
+  var per = total / 5;
 
-  print("total Percentage is := $per"); 
+  print("total Percentage is := $per");
 }
