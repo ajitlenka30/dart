@@ -8,6 +8,4 @@ void main(List<String> args) {
   print(ls.reversed);
   print(ls.isEmpty);
   print(ls.isNotEmpty);
-
-  
 }
