@@ -29,7 +29,7 @@ void main(List<String> args) {
       int order = int.parse(stdin.readLineSync() as String);
       stdout.write("**********************************[Bill]***********************************");
       var total = order * 5;
-      stdout.write("total hua apka :- $total");
+      stdout.write("\ntotal hua apka :- $total");
       stdout.write("\n***************************************************************************");
     break;
 
@@ -42,7 +42,7 @@ void main(List<String> args) {
 
       stdout.write("**********************************[Bill]***********************************");
       var total = order * 10;
-      stdout.write("total hua apka :- $total");
+      stdout.write("\ntotal hua apka :- $total");
       stdout.write("\n***************************************************************************");
     break;
 
