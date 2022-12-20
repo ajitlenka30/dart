@@ -61,6 +61,5 @@ void main(List<String> args) {
   }
 
   var per = total / 5;
-
   print("total Percentage is := $per");
 }
