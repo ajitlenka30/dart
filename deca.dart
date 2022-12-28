@@ -9,10 +9,6 @@ class Abc {
 
     double area = 5 / 2 * pow(base, 2) * sqrt(5 + 2); // * sqrt(5);
 
-    // double ans = base * sqrt(5 + 2);  sqrt(5);
-
-    // print("ans = $ans");
-
      print("area of decagon := $area");
   }
 }
