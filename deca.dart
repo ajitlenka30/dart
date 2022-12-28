@@ -1,25 +1,24 @@
 import 'dart:io';
+import 'dart:math';
 
 class Abc {
-  var a, b, ans, area;
-  void func(a, b, c) {
+  var base;
+  void func(base) {
     stdout.write("Enter base :- ");
-    var a = int.parse(stdin.readLineSync() as String);
-    stdout.write("Enter hight :- ");
-    var b = int.parse(stdin.readLineSync() as String);
+    double base = double.parse(stdin.readLineSync() as String);
 
-    stdout.write("Enter amount of lines :- ");
-    var c = int.parse(stdin.readLineSync() as String);
+    // double area = 5 / 2 * pow(base, 2) * sqrt(5 + 2) * sqrt(5);
 
-    var ans = (a * b) / 2;
-    var area = ans * c;
+    double ans = base * sqrt(5 + 2) * sqrt(5);
 
-    print("area of decagon := $area");
+    print("ans = $ans");
+
+    // print("area of decagon := $area");
   }
 }
 
 void main(List<String> args) {
   Abc obj = Abc();
-  var a, b, c;
-  obj.func(a, b, c);
+  double base;
+  obj.func(2);
 }
