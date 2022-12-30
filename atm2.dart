@@ -2,37 +2,32 @@ import 'dart:io';
 
 void reg() {
   var ans;
-  do {
-    stdout.write(
-        "***************************************************************************");
+
+    stdout.write("***************************************************************************");
     stdout.write("\nRegister your name :- ");
     String? name = stdin.readLineSync();
     stdout.write("\nRegister your pin :- ");
     var password = stdin.readLineSync() as String;
-    stdout.write(
-        "\n***************************************************************************");
+    stdout.write("\n***************************************************************************");
     stdout.write("\n\nregister complete");
-    stdout.write(
-        "\n\n***************************************************************************");
+    stdout.write("\n\n***************************************************************************");
+    do {
     stdout.write("\nEnter your ATM name for login: ");
     String? nam = stdin.readLineSync();
     stdout.write("\nEnter your ATM pin: ");
     var pass = stdin.readLineSync() as String;
-    stdout.write(
-        "\n***************************************************************************");
+    stdout.write("\n***************************************************************************");
 
     if (name == nam && password == pass) {
       print("\n\n\t\tlogin success");
-      stdout.write(
-          "\n***************************************************************************");
+      stdout.write("\n***************************************************************************");
     } else {
       print("\n\nplease enter vail password and name");
-      stdout.write(
-          "\n***************************************************************************");
+      stdout.write("\n***************************************************************************");
     }
     stdout.write("\nDo you want to continue (Y/N)?");
     var ans = stdin.readLineSync();
-  } while ((ans != 'Y') && (ans != 'y'));
+  } while ((ans != 'N') && (ans != 'n'));
 }
 
 void main(List<String> args) {
@@ -41,7 +36,8 @@ void main(List<String> args) {
   int balance = 5000, withdraw, deposit;
   var ans;
 
-  stdout.write("Automated Teller Machine");
+  do {
+
   stdout.write("\nChoose 1 for Withdraw");
   stdout.write("\nChoose 2 for Deposit");
   stdout.write("\nChoose 3 for Check Balance");
@@ -50,7 +46,6 @@ void main(List<String> args) {
   stdout.write("\nChoose the operation you want to perform:");
   var choice = int.parse(stdin.readLineSync() as String);
 
-  do {
     switch (choice) {
       case 1:
         stdout.write("Enter money to be withdrawn:");
