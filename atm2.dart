@@ -37,7 +37,6 @@ void main(List<String> args) {
   var ans;
 
   do {
-
   stdout.write("\nChoose 1 for Withdraw");
   stdout.write("\nChoose 2 for Deposit");
   stdout.write("\nChoose 3 for Check Balance");
@@ -56,7 +55,7 @@ void main(List<String> args) {
         } else {
           stdout.write("Insufficient Balance");
         }
-        break;
+      break;
 
       case 2:
         stdout.write("Enter money to be deposited:");
@@ -64,7 +63,7 @@ void main(List<String> args) {
         balance = balance + deposit;
         stdout.write("Your Money has been successfully depsited");
         stdout.write("");
-        break;
+      break;
 
       case 3:
         stdout.write("Balance : $balance");
