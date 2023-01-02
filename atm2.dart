@@ -1,7 +1,7 @@
 import 'dart:io';
 
 void reg() {
-  var ans;
+    var ans;
 
     stdout.write("***************************************************************************");
     stdout.write("\nRegister your name :- ");
@@ -11,7 +11,7 @@ void reg() {
     stdout.write("\n***************************************************************************");
     stdout.write("\n\nregister complete");
     stdout.write("\n\n***************************************************************************");
-    do {
+  do {
     stdout.write("\nEnter your ATM name for login: ");
     String? nam = stdin.readLineSync();
     stdout.write("\nEnter your ATM pin: ");
@@ -28,6 +28,7 @@ void reg() {
     stdout.write("\nDo you want to continue (Y/N)?");
     var ans = stdin.readLineSync();
   } while ((ans != 'N') && (ans != 'n'));
+
 }
 
 void main(List<String> args) {
