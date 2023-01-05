@@ -1,14 +1,13 @@
 import 'dart:io';
-class Task{
-  Task(){
-   stdout.write("Enter your first name:- ");
-   String? name = stdin.readLineSync();
-   stdout.write("Enter your midle name:- ");
-   String? midle = stdin.readLineSync();
-   stdout.write("Enter your last name:- ");
-   String? last = stdin.readLineSync();
-    
-    List username =[name,midle,last];
+
+class Task {
+  Task() {
+    stdout.write("Enter your first name:- ");
+    String? name = stdin.readLineSync();
+    stdout.write("Enter your midle name:- ");
+    String? midle = stdin.readLineSync();
+    stdout.write("Enter your last name:- ");
+    String? last = stdin.readLineSync();
 
     stdout.write("\n1. Remove");
     stdout.write("\n2. Replace");
@@ -17,66 +16,82 @@ class Task{
     stdout.write("\n5. uper-case");
 
     stdout.write("\nEnter your choice :- ");
-    int choice = int.parse(stdin.readLineSync()as String);
+    int choice = int.parse(stdin.readLineSync() as String);
 
-    switch(choice){
+    switch (choice) {
+      case 1:
+        stdout.write("\nyour entered name is :- $name $midle $last");
+        stdout.write("\nEnter name that you want to remove :- ");
+        String? remove = stdin.readLineSync();
+        stdout.write("\nEnter name that you want to remove :- ");
+        var to = stdin.readLineSync()as String;
+        print(name?.replaceFirst(name, to));
+        stdout.write("\nsuccessfully removed");
+        stdout.write("\ncurrent name :- $name $midle $last");
 
-    case 1:
-    stdout.write("\nyour entered name is :- $username");
-    stdout.write("\nEnter name that you want to remove :- ");
-    String? remove = stdin.readLineSync();
-    username.remove(remove);  
-    stdout.write("\nsuccessfully removed");
-    stdout.write("\ncurrent name :- $username"); 
-    break;
+        break;
+      case 2:
+        List username = [name, midle, last];
+        stdout.write("\nyour entered name is :- $username");
+        stdout.write("\nEnter name that you want to remove :- ");
+        String? remove = stdin.readLineSync();
+        username.remove(remove);
+        stdout.write("\nsuccessfully removed");
+        stdout.write("\ncurrent name :- $username");
+        break;
 
-    case 2:
-    stdout.write("\nyour entered name is :- $username");
-    stdout.write("\nEnter index that you want to replace :- ");
-    var replace = int.parse(stdin.readLineSync()as String);
-    stdout.write("\nEnter replace name:- ");
-    var element = stdin.readLineSync();
+      case 3:
+        List username = [name, midle, last];
+        stdout.write("\nyour entered name is :- $username");
+        stdout.write("\nEnter index that you want to replace :- ");
+        var replace = int.parse(stdin.readLineSync() as String);
+        stdout.write("\nEnter replace name:- ");
+        var element = stdin.readLineSync();
 
-    username[replace] =  element;
+        username[replace] = element;
 
-    stdout.write("\nsuccessfully replaced");
-    stdout.write("\ncurrent name :- $username");
-    break;
+        stdout.write("\nsuccessfully replaced");
+        stdout.write("\ncurrent name :- $username");
+        break;
 
-    case 3:
-    stdout.write("\nyour entered name is :- $name $midle $last");
-    stdout.write("\nEnter name that you want to Add :- ");
-    String? add = stdin.readLineSync();
+      case 4:
+        List username = [name, midle, last];
+        stdout.write("\nyour entered name is :- $name $midle $last");
+        stdout.write("\nEnter name that you want to Add :- ");
+        String? add = stdin.readLineSync();
 
-    username.add(add);
-    stdout.write("\nsuccessfully add in end");
-    stdout.write("\ncurrent name :- $username");
+        username.add(add);
+        stdout.write("\nsuccessfully add in end");
+        stdout.write("\ncurrent name :- $username");
 
-    break;
-    case 4:
-    stdout.write("\nyour entered name is :- $username");
-    stdout.write("\nEnter name that you want to Add :- ");
-    String? end = stdin.readLineSync();
+        break;
+      case 5:
+        List username = [name, midle, last];
+        stdout.write("\nyour entered name is :- $username");
+        stdout.write("\nEnter name that you want to Add :- ");
+        String? end = stdin.readLineSync();
 
-    username.insert(0, end);
+        username.insert(0, end);
 
-    stdout.write("\nsuccessfully add in first");
-    stdout.write("\ncurrent name :- $username");
-    break;
+        stdout.write("\nsuccessfully add in first");
+        stdout.write("\ncurrent name :- $username");
+        break;
 
-    case 5:
-    stdout.write("\nyour entered name is :- $username");
-    stdout.write("\nEnter name that you want to Add :- ");
-    String? end = stdin.readLineSync();
+      case 6:
+        List username = [name, midle, last];
+        stdout.write("\nyour entered name is :- $username");
+        stdout.write("\nEnter name that you want to Add :- ");
+        String? end = stdin.readLineSync();
 
-    username.insert(0, end);
+        username.insert(0, end);
 
-    stdout.write("\nsuccessfully add in first");
-    stdout.write("\ncurrent name :- $username");
-    break;
+        stdout.write("\nsuccessfully add in first");
+        stdout.write("\ncurrent name :- $username");
+        break;
     }
   }
 }
+
 void main(List<String> args) {
-   Task();
+  Task();
 }
