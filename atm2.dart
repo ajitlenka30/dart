@@ -35,8 +35,6 @@ class reg {
 class Atm extends reg {
   void atm2() {
     int balance = 5000;
-    // var ans;
-    String? ans;
 
     do {
       stdout.write("\nChoose 1 for Withdraw");
@@ -75,9 +73,8 @@ class Atm extends reg {
           stdout.write("\nexit");
       }
       stdout.write("\nDo you want to continue (Y/N)?\n");
-      // var ans = int.parse(stdin.readLineSync() as String);
-      String? ans = stdin.readLineSync() as String;
-    } while ((ans == 'Y') || (ans == 'y'));
+      var ans = int.parse(stdin.readLineSync() as String);
+    } while (ans == 'Y' || ans == 'y');
   }
 }
 
