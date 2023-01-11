@@ -13,6 +13,23 @@ class Reg {
     stdout.write("\n\nregister complete");
     stdout.write(
         "\n\n***************************************************************************");
+  }
+}
+
+class Verify extends Reg {
+  void verify() {
+    // stdout.write(
+    //     "***************************************************************************");
+    // stdout.write("\nRegister your name :- ");
+    // String? name = stdin.readLineSync();
+    // stdout.write("\nRegister your pin :- ");
+    // var password = stdin.readLineSync() as String;
+    // stdout.write(
+    //     "\n***************************************************************************");
+    // stdout.write("\n\nregister complete");
+    // stdout.write(
+    // "\n\n***************************************************************************");
+    this.name;
     stdout.write("\nEnter your ATM name for login: ");
     String? nam = stdin.readLineSync();
     stdout.write("\nEnter your ATM pin: ");
@@ -20,7 +37,7 @@ class Reg {
     stdout.write(
         "\n***************************************************************************");
 
-    if (name == nam && password == pass) {
+    if (this.name == nam && password == pass) {
       print("\n\n\t\tlogin success");
       stdout.write(
           "\n***************************************************************************");
@@ -52,45 +69,45 @@ class Atm extends Reg {
           "\n***************************************************************************");
 
       switch (choice) {
-       case 1:
+        case 1:
           stdout.write("\nEnter money to be withdrawn:");
           var withdraw = int.parse(stdin.readLineSync() as String);
-           stdout.write(
-          "\n***************************************************************************");
+          stdout.write(
+              "\n***************************************************************************");
           if (balance >= withdraw) {
             balance = balance - withdraw;
             stdout.write("\nPlease collect your money");
           } else {
             stdout.write(
-          "\n***************************************************************************");
+                "\n***************************************************************************");
             stdout.write("\nInsufficient Balance");
             stdout.write(
-          "\n***************************************************************************");
+                "\n***************************************************************************");
           }
-        break;
+          break;
 
         case 2:
           stdout.write("\nEnter money to be deposited:");
           var deposit = int.parse(stdin.readLineSync() as String);
           stdout.write(
-          "\n***************************************************************************");
+              "\n***************************************************************************");
           balance = balance + deposit;
           stdout.write(
-          "\n***************************************************************************");
+              "\n***************************************************************************");
           stdout.write("\nYour Money has been successfully deposit");
           stdout.write(
-          "\n***************************************************************************");
-        break;
+              "\n***************************************************************************");
+          break;
 
         case 3:
           stdout.write("\nBalance : $balance");
-           stdout.write(
-          "\n***************************************************************************");
-        break;
+          stdout.write(
+              "\n***************************************************************************");
+          break;
         default:
           stdout.write("\nGood bye");
           stdout.write(
-          "\n***************************************************************************");
+              "\n***************************************************************************");
           run = false;
       }
     }
