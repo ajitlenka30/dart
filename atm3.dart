@@ -1,7 +1,10 @@
 import 'dart:io';
 
 class Reg {
+  String? name;
+  var password;
   void reg() {
+    this.name = name;
     stdout.write(
         "***************************************************************************");
     stdout.write("\nRegister your name :- ");
@@ -18,18 +21,6 @@ class Reg {
 
 class Verify extends Reg {
   void verify() {
-    // stdout.write(
-    //     "***************************************************************************");
-    // stdout.write("\nRegister your name :- ");
-    // String? name = stdin.readLineSync();
-    // stdout.write("\nRegister your pin :- ");
-    // var password = stdin.readLineSync() as String;
-    // stdout.write(
-    //     "\n***************************************************************************");
-    // stdout.write("\n\nregister complete");
-    // stdout.write(
-    // "\n\n***************************************************************************");
-    this.name;
     stdout.write("\nEnter your ATM name for login: ");
     String? nam = stdin.readLineSync();
     stdout.write("\nEnter your ATM pin: ");
@@ -37,7 +28,7 @@ class Verify extends Reg {
     stdout.write(
         "\n***************************************************************************");
 
-    if (this.name == nam && password == pass) {
+    if (this.name == nam && this.password == pass) {
       print("\n\n\t\tlogin success");
       stdout.write(
           "\n***************************************************************************");
@@ -49,7 +40,7 @@ class Verify extends Reg {
   }
 }
 
-class Atm extends Reg {
+class Atm extends Verify {
   void atm2() {
     int balance = 5000;
 
@@ -117,5 +108,6 @@ class Atm extends Reg {
 void main(List<String> args) {
   Atm obj = Atm();
   obj.reg();
+  obj.verify();
   obj.atm2();
 }
