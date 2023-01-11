@@ -38,39 +38,59 @@ class Atm extends Reg {
 
     bool run = true;
     while (run) {
+      stdout.write(
+          "\n***************************************************************************");
       stdout.write("\nChoose 1 for Withdraw");
       stdout.write("\nChoose 2 for Deposit");
       stdout.write("\nChoose 3 for Check Balance");
       stdout.write("\nChoose 4 for EXIT");
-
+      stdout.write(
+          "\n***************************************************************************");
       stdout.write("\n\nChoose the operation you want to perform:");
       var choice = int.parse(stdin.readLineSync() as String);
+      stdout.write(
+          "\n***************************************************************************");
 
       switch (choice) {
-        case 1:
-          stdout.write("Enter money to be withdrawn:");
+       case 1:
+          stdout.write("\nEnter money to be withdrawn:");
           var withdraw = int.parse(stdin.readLineSync() as String);
+           stdout.write(
+          "\n***************************************************************************");
           if (balance >= withdraw) {
             balance = balance - withdraw;
-            stdout.write("Please collect your money");
+            stdout.write("\nPlease collect your money");
           } else {
-            stdout.write("Insufficient Balance");
+            stdout.write(
+          "\n***************************************************************************");
+            stdout.write("\nInsufficient Balance");
+            stdout.write(
+          "\n***************************************************************************");
           }
-          break;
+        break;
 
         case 2:
-          stdout.write("Enter money to be deposited:");
+          stdout.write("\nEnter money to be deposited:");
           var deposit = int.parse(stdin.readLineSync() as String);
+          stdout.write(
+          "\n***************************************************************************");
           balance = balance + deposit;
-          stdout.write("Your Money has been successfully deposit");
-          stdout.write("");
-          break;
+          stdout.write(
+          "\n***************************************************************************");
+          stdout.write("\nYour Money has been successfully deposit");
+          stdout.write(
+          "\n***************************************************************************");
+        break;
 
         case 3:
-          stdout.write("Balance : $balance");
-          break;
+          stdout.write("\nBalance : $balance");
+           stdout.write(
+          "\n***************************************************************************");
+        break;
         default:
           stdout.write("\nGood bye");
+          stdout.write(
+          "\n***************************************************************************");
           run = false;
       }
     }
