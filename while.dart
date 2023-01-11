@@ -1,7 +1,7 @@
 import 'dart:io';
 
 void main(List<String> args) {
-  int i = 0;
+  var ans;
   stdout.write(
       "***************************************************************************");
   stdout.write("\nRegister your name :- ");
@@ -29,7 +29,8 @@ void main(List<String> args) {
       print("\n\nplease enter vail password and name");
       stdout.write(
           "\n***************************************************************************");
-      i++;
     }
-  } while (i < 2);
+    stdout.write("\ndo you want to continue:- ");
+    ans = stdin.readLineSync();
+  } while (ans < 2);
 }
