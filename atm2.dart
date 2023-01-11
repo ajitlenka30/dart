@@ -36,7 +36,7 @@ class Atm extends reg {
   void atm2() {
     int balance = 5000;
 
-    do {
+  do {
       stdout.write("\nChoose 1 for Withdraw");
       stdout.write("\nChoose 2 for Deposit");
       stdout.write("\nChoose 3 for Check Balance");
