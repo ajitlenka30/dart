@@ -1,3 +1,5 @@
+import 'dart:io';
+
 class A {
   void func(no1, no2) {}
 }
@@ -14,7 +16,7 @@ class D {
   void fun4(no1, no2) {}
 }
 
-class Xyz implements A, B, C, D {  // use implements keyword for inherit class
+class Xyz implements A, B, C, D {  // use implements keyword for inherit class (this keyword will only use in interface)
   @override
   void func(no1, no2) {
     print("ans = ${no1 + no2}");
@@ -22,6 +24,10 @@ class Xyz implements A, B, C, D {  // use implements keyword for inherit class
 
   @override
   void fun2(no1, no2) {
+    stdout.write("\nEnter the value of no1 number :- ");                 //
+    no1 = int.parse(stdin.readLineSync() as String);        //
+    stdout.write("\nEnter the value of no2 number :- ");                 //          user input in interface
+    no2 = int.parse(stdin.readLineSync() as String);        //
     print("ans = ${no1 - no2}");
   }
 
