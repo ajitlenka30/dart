@@ -30,8 +30,7 @@ void main(List<String> args) {
       stdout.write(
           "\n***************************************************************************");
     }
-    stdout.write("\ndo you want to continue:- ");
-    // ans = stdin.readLineSync();
+    stdout.write("\ndo you want to continue press [1/2] :- ");
     ans = int.parse(stdin.readLineSync()!);
   } while (1 < ans);
 }

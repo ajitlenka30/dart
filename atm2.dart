@@ -1,7 +1,9 @@
 import 'dart:io';
 
-class reg {
+class Reg {
   void rege() {
+    int? ans;
+
     stdout.write(
         "***************************************************************************");
     stdout.write("\nRegister your name :- ");
@@ -13,30 +15,34 @@ class reg {
     stdout.write("\n\nregister complete");
     stdout.write(
         "\n\n***************************************************************************");
-    stdout.write("\nEnter your ATM name for login: ");
-    String? nam = stdin.readLineSync();
-    stdout.write("\nEnter your ATM pin: ");
-    var pass = stdin.readLineSync() as String;
-    stdout.write(
-        "\n***************************************************************************");
+    do {
+      stdout.write("\nEnter your ATM name for login: ");
+      String? nam = stdin.readLineSync();
+      stdout.write("\nEnter your ATM pin: ");
+      var pass = stdin.readLineSync() as String;
+      stdout.write(
+          "\n***************************************************************************");
 
-    if (name == nam && password == pass) {
-      print("\n\n\t\tlogin success");
-      stdout.write(
-          "\n***************************************************************************");
-    } else {
-      print("\n\nplease enter vail password and name");
-      stdout.write(
-          "\n***************************************************************************");
-    }
+      if (name == nam && password == pass) {
+        print("\n\n\t\tlogin success");
+        stdout.write(
+            "\n***************************************************************************");
+      } else {
+        print("\n\nplease enter vail password and name");
+        stdout.write(
+            "\n***************************************************************************");
+      }
+      stdout.write("\ndo you want to continue press [1/2] :- ");
+      ans = int.parse(stdin.readLineSync()!);
+    } while (1 < ans);
   }
 }
 
-class Atm extends reg {
+class Atm extends Reg {
   void atm2() {
     int balance = 5000;
-    var ans;
-  do {
+    int? ans;
+    do {
       stdout.write("\nChoose 1 for Withdraw");
       stdout.write("\nChoose 2 for Deposit");
       stdout.write("\nChoose 3 for Check Balance");
@@ -67,14 +73,13 @@ class Atm extends reg {
 
         case 3:
           stdout.write("Balance : $balance");
-          stdout.write("");
           break;
         default:
           stdout.write("\nexit");
       }
-      stdout.write("\nDo you want to continue (Y/N)?\n");
-      ans = int.parse(stdin.readLineSync() as String);
-    } while (ans == 'Y' || ans == 'y');
+      stdout.write("\ndo you want to continue press [1/2] :- ");
+      ans = int.parse(stdin.readLineSync()!);
+    } while (1 < ans);
   }
 }
 

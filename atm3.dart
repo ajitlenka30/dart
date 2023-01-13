@@ -1,8 +1,9 @@
 import 'dart:io';
 
-
 class Reg {
   void reg() {
+    int? ans;
+
     stdout.write(
         "***************************************************************************");
     stdout.write("\nRegister your name :- ");
@@ -12,24 +13,28 @@ class Reg {
     stdout.write(
         "\n***************************************************************************");
     stdout.write("\n\nregister complete");
-    stdout.write(
-        "\n\n***************************************************************************");
-    stdout.write("\nEnter your ATM name for login: ");
-    String? nam = stdin.readLineSync();
-    stdout.write("\nEnter your ATM pin: ");
-    var pass = stdin.readLineSync() as String;
-    stdout.write(
-        "\n***************************************************************************");
+    do {
+      stdout.write(
+          "\n\n***************************************************************************");
+      stdout.write("\nEnter your ATM name for login: ");
+      String? nam = stdin.readLineSync();
+      stdout.write("\nEnter your ATM pin: ");
+      var pass = stdin.readLineSync() as String;
+      stdout.write(
+          "\n***************************************************************************");
 
-    if (name == nam && password == pass) {
-      print("\n\n\t\tlogin success");
-      stdout.write(
-          "\n***************************************************************************");
-    } else {
-      print("\n\nplease enter vail password and name");
-      stdout.write(
-          "\n***************************************************************************");
-    }
+      if (name == nam && password == pass) {
+        print("\n\n\t\tlogin success");
+        stdout.write(
+            "\n***************************************************************************");
+      } else {
+        print("\n\nplease enter vail password and name");
+        stdout.write(
+            "\n***************************************************************************");
+      }
+      stdout.write("\ndo you want to continue press [1/2] :- ");
+      ans = int.parse(stdin.readLineSync()!);
+    } while (1 < ans);
   }
 }
 
