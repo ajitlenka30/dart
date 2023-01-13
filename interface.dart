@@ -25,9 +25,9 @@ class Xyz implements A, B, C, D {  // use implements keyword for inherit class (
   @override
   void fun2(no1, no2) {
     stdout.write("\nEnter the value of no1 number :- ");                 //
-    no1 = int.parse(stdin.readLineSync() as String);        //
+    no1 = int.parse(stdin.readLineSync() as String);                     //
     stdout.write("\nEnter the value of no2 number :- ");                 //          user input in interface
-    no2 = int.parse(stdin.readLineSync() as String);        //
+    no2 = int.parse(stdin.readLineSync() as String);                     //
     print("ans = ${no1 - no2}");
   }
 
