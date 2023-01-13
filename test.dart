@@ -15,6 +15,5 @@ class Stu {
     var roll = stdin.readLineSync() as String;
     stdout.write("Enter id number of student :- ");
     var id = stdin.readLineSync() as String;
-    
   }
 }

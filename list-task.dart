@@ -84,7 +84,6 @@ class Task {
         stdout.write("\nEnter name that you want to upper case :- ");
         var to = stdin.readLineSync() as String;
 
-        // var as = name?.toUpperCase(name, to);
         var as = name?.replaceFirst(name, to);
 
         stdout.write("\nsuccessfully uppercase");
