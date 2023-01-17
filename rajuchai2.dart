@@ -4,7 +4,9 @@ void main(List<String> args) {
   User obj = User();
   var ans;
   do {
-    stdout.write("1. Admin");
+    stdout.write(
+        "***************************************************************************");
+    stdout.write("\n1. Admin");
     stdout.write("\n2. User");
     stdout.write(
         "\n***************************************************************************");
@@ -47,10 +49,6 @@ class Admin {
       stdout.write("\n3. Replace product");
       stdout.write(
           "\n***************************************************************************");
-
-      var product1;
-      var product2;
-      var product3;
 
       List product = [product1, product2, product3];
 
