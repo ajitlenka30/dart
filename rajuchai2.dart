@@ -8,12 +8,10 @@ void main(List<String> args) {
         "***************************************************************************");
     stdout.write("\n1. Admin");
     stdout.write("\n2. User");
-    stdout.write(
-        "\n***************************************************************************");
+    stdout.write("\n***************************************************************************");
     stdout.write("\nEnter your choice:- ");
     int ans = int.parse(stdin.readLineSync() as String);
-    stdout.write(
-        "\n***************************************************************************");
+
     switch (ans) {
       case 1:
         obj.admin();
