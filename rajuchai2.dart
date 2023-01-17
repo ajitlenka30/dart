@@ -9,10 +9,10 @@ void main(List<String> args) {
     stdout.write(
         "\n***************************************************************************");
     stdout.write("\nEnter your choice:- ");
-    int userans = int.parse(stdin.readLineSync() as String);
+    int ans = int.parse(stdin.readLineSync() as String);
     stdout.write(
         "\n***************************************************************************");
-    switch (userans) {
+    switch (ans) {
       case 1:
         obj.admin();
         break;
@@ -47,6 +47,10 @@ class Admin {
       stdout.write("\n3. Replace product");
       stdout.write(
           "\n***************************************************************************");
+
+      var product1;
+      var product2;
+      var product3;
 
       List product = [product1, product2, product3];
 
