@@ -13,6 +13,7 @@ class Reg {
     stdout.write(
         "\n***************************************************************************");
     stdout.write("\n\nregister complete");
+
     do {
       stdout.write(
           "\n\n***************************************************************************");
@@ -34,7 +35,7 @@ class Reg {
       }
       stdout.write("\ndo you want to continue press [1/2] :- ");
       ans = int.parse(stdin.readLineSync()!);
-    } while (1 < ans);
+    } while (1 == ans);
   }
 }
 
