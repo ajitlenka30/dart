@@ -32,7 +32,7 @@ class Reg {
         stdout.write(
             "\n***************************************************************************");
       }
-      stdout.write("\ndo you want to continue press [1/2] :- ");
+      stdout.write("\ndo you want to continue press [1] :- ");
       ans = int.parse(stdin.readLineSync()!);
     } while (1 == ans);
   }
@@ -76,7 +76,7 @@ class Atm extends Reg {
         default:
           stdout.write("\nGood bye");
       }
-      stdout.write("\ndo you want to continue press [1/2] :- ");
+      stdout.write("\ndo you want to continue press [1] :- ");
       ans = int.parse(stdin.readLineSync()!);
     } while (1 == ans);
   }
