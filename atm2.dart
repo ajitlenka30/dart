@@ -34,7 +34,7 @@ class Reg {
       }
       stdout.write("\ndo you want to continue press [1/2] :- ");
       ans = int.parse(stdin.readLineSync()!);
-    } while (1 < ans);
+    } while (1 == ans);
   }
 }
 
@@ -79,7 +79,7 @@ class Atm extends Reg {
       }
       stdout.write("\ndo you want to continue press [1/2] :- ");
       ans = int.parse(stdin.readLineSync()!);
-    } while (1 < ans);
+    } while (1 == ans);
   }
 }
 
