@@ -46,7 +46,6 @@ class Atm extends Reg {
       stdout.write("\nChoose 1 for Withdraw");
       stdout.write("\nChoose 2 for Deposit");
       stdout.write("\nChoose 3 for Check Balance");
-      stdout.write("\nChoose 4 for EXIT");
 
       stdout.write("\nChoose the operation you want to perform:");
       var choice = int.parse(stdin.readLineSync() as String);
@@ -75,7 +74,7 @@ class Atm extends Reg {
           stdout.write("Balance : $balance");
           break;
         default:
-          stdout.write("\nexit");
+          stdout.write("\nGood bye");
       }
       stdout.write("\ndo you want to continue press [1/2] :- ");
       ans = int.parse(stdin.readLineSync()!);
