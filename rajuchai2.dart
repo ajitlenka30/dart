@@ -4,8 +4,7 @@ void main(List<String> args) {
   User obj = User();
   var ans;
   do {
-    stdout.write(
-        "***************************************************************************");
+    stdout.write("***************************************************************************");
     stdout.write("\n1. Admin");
     stdout.write("\n2. User");
     stdout.write("\n***************************************************************************");
@@ -26,8 +25,7 @@ void main(List<String> args) {
     }
     stdout.write("\ndo you want to continue press [1] :- ");
     ans = int.parse(stdin.readLineSync()!);
-    stdout.write(
-        "\n***************************************************************************");
+    stdout.write("\n***************************************************************************");
   } while (ans == 1);
 }
 
