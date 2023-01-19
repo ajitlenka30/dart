@@ -8,7 +8,8 @@ void main(List<String> args) {
         "***************************************************************************");
     stdout.write("\n1. Admin");
     stdout.write("\n2. User");
-    stdout.write("\n***************************************************************************");
+    stdout.write(
+        "\n***************************************************************************");
     stdout.write("\nEnter your choice:- ");
     int ans = int.parse(stdin.readLineSync() as String);
 
@@ -35,10 +36,20 @@ void main(List<String> args) {
 
 class Admin {
   var userans1;
-  String? product1 = "chai";
-  String? product2 = "coffee";
-  String? product3 = "biscuit";
+  var product1;
+  var product2;
+  var product3;
   void admin() {
+
+    stdout.write("Enter 1st product name =");
+    product1 = stdin.readLineSync();
+    stdout.write("\nEnter 2st product name =");
+    product2 = stdin.readLineSync();
+    stdout.write("\nEnter 3st product name =");
+    product3 = stdin.readLineSync();
+
+    List product = [product1, product2, product3];
+
     do {
       stdout.write(
           "\n***************************************************************************");
@@ -66,7 +77,6 @@ class Admin {
               "\n***************************************************************************");
           product.add(add);
           stdout.write("\nsuccessfully added new product");
-          // stdout.write("\nupdated product list :- $product");
           stdout.write(
               "\n***************************************************************************");
           break;
@@ -83,7 +93,6 @@ class Admin {
           stdout.write(
               "\n***************************************************************************");
           stdout.write("\nsuccessfully removed product");
-          // stdout.write("\nupdated product list :- $product");
           stdout.write(
               "\n***************************************************************************");
           break;
@@ -102,7 +111,6 @@ class Admin {
               "\n***************************************************************************");
           product[replace] = element;
           stdout.write("\nsuccessfully replaced product");
-          // stdout.write("\nupdated product list:- $product");
           stdout.write(
               "\n***************************************************************************");
           break;
