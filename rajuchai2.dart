@@ -149,7 +149,7 @@ class User extends Admin {
       stdout.write(
           "***************************************************************************");
 
-      var ls = stdout.write("\nkeya chahiye aap ko :- ");
+      stdout.write("\nkeya chahiye aap ko :- ");
       int ans = int.parse(stdin.readLineSync() as String);
 
       switch (ans) {
