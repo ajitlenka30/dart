@@ -105,7 +105,7 @@ class Admin {
           stdout.write("\ncurrent we have these product :- $product");
           stdout.write(
               "\n***************************************************************************");
-          stdout.write("\nEnter product name that you want to replace :- ");
+          stdout.write("\nEnter product name that you want to replace [type in num.] :- ");
           var replace = int.parse(stdin.readLineSync() as String);
           stdout.write(
               "\n***************************************************************************");
