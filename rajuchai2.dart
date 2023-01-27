@@ -42,15 +42,15 @@ class Admin {
   void admin() {
     stdout.write(
         "\n***************************************************************************");
-    stdout.write("\nEnter 1st product name =");
+    stdout.write("\nEnter 1st product name :-");
     product1 = stdin.readLineSync();
     stdout.write(
         "\n***************************************************************************");
-    stdout.write("\nEnter 2st product name =");
+    stdout.write("\nEnter 2st product name :-");
     product2 = stdin.readLineSync();
     stdout.write(
         "\n***************************************************************************");
-    stdout.write("\nEnter 3st product name =");
+    stdout.write("\nEnter 3st product name :-");
     product3 = stdin.readLineSync();
 
     List product = [product1, product2, product3];
@@ -123,6 +123,9 @@ class Admin {
           stdout.write(
               "\n***************************************************************************");
           break;
+        default:
+          stdout.write("\nplease enter a valid option...");
+          stdout.write("\n***************************************************************************");
       }
       stdout.write("\ndo you want to continue press [1] :- ");
       userans1 = int.parse(stdin.readLineSync()!);
